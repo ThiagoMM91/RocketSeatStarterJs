@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio JS RocketSeat</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="desafio.css">
+    </head>
+    <body>
+        <header class="titulo">
+            <h1 class="textTitulo">Desáfio Rocketseat</h1>
+            <h2>Módulo 2 - Desafio 03</h2>
+        
+        </header>
+
+<body>
+    <ul class="lista"></ul>
+</body>
+
+<!--
+3º exercício
+A partir do seguinte vetor:
+var nomes = ["Diego", "Gabriel", "Lucas"];
+Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+● Diego
+● Gabriel
+● Lucas
+-->
+
+<script>
+    var names = ['Diego', "Gabriel", "Lucas"];
+    
+    var listaUl = document.querySelector('.lista');
+    
+    for (nomesUsers of names){
+        var nomeLi = document.createElement('li');
+        var textLi = document.createTextNode(nomesUsers);
+        nomeLi.appendChild(textLi);
+        listaUl.appendChild(nomeLi);
+    }
+    
+    </script>

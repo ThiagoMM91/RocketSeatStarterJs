@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio JS RocketSeat</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="desafio.css">
+    </head>
+    <body>
+        <header class="titulo">
+            <h1 class="textTitulo">Desáfio Rocketseat</h1>
+            <h2>Módulo 2 - Desafio 01</h2>
+        
+        </header>
+
+        <div class="botaoHome">
+            <button class="btnPrincipal">Make a box [:)]</button>
+        </div>
+
+        <div class="quadrados"></div>
+
+    </body>
+
+<!--
+1º exercício
+Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de um quadrado
+vermelho com 100px de altura e largura. Sempre que o botão for clicado um novo quadrado deve
+aparecer na tela.
+-->
+    
+    <script>
+
+var buttonHome = document.querySelector('.btnPrincipal')
+var boxElement = document.querySelector('.quadrados')
+
+
+
+buttonHome.addEventListener('click', function () {
+    var boxes = document.createElement ('div');
+    boxes.style.width = '100';
+    boxes.style.height = '100';
+    boxes.style.backgroundColor = 'cyan';
+
+        boxElement.appendChild(boxes);
+    });
+
+    </script>

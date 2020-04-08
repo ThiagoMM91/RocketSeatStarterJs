@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafios Módulo 1 JS - Rocketseat</title>
+    </head>
+
+<!--4º exercício
+function experiencia(anos) {
+ // código aqui
+}
+var anosEstudo = 7;
+experiencia(anosEstudo);
+// De 0-1 ano: Iniciante
+// De 1-3 anos: Intermediário
+// De 3-6 anos: Avançado
+// De 7 acima: Jedi Master
+-->
+
+    <body>
+<div class="container-fluid titulo">
+        <h1 class="tituloPagina"> Desafios de Javascript - Rocketseat </h1>
+        <h2> Módulo 1 - Desafio 04</h2>
+</div>
+    
+
+</body>
+<script>
+var anosEstudo = 3;
+
+function experiencia(anos) {
+var exp = "indefinido"
+
+if (anos > 0 && anos <= 1){
+return exp = 'iniciante';
+    
+    } else if (anos > 1 && anos <= 3) {
+    return exp = 'Intermediária';
+    
+        } else if (anos > 3 && anos <= 6) {    
+        return exp = 'Avançada';
+    
+             }else if (anos >= 7) {
+             return exp = 'Jedi Master';
+    }
+}
+
+var exp = experiencia(anosEstudo);
+console.log (exp);
+
+texto = document.createTextNode("Sua experiência em Programação é: " + exp);
+document.body.appendChild(texto)
+
+</script>
+
+</html>

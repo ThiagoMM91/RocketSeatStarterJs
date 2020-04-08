@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio JS RocketSeat</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="desafio.css">
+    </head>
+    <body>
+        <header class="titulo">
+            <h1 class="textTitulo">Desáfio Rocketseat</h1>
+            <h2>Módulo 2 - Desafio 02</h2>
+        
+        </header>
+
+        <div class="botaoHome">
+            <button class="btnPrincipal">Make a box [:)]</button>
+        </div>
+
+        <div class="quadrados"></div>
+
+    </body>
+
+<!--
+2º exercício
+Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
+algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
+function getRandomColor() {
+ var letters = "0123456789ABCDEF";
+ var color = "#";
+ for (var i = 0; i < 6; i++) {
+ color += letters[Math.floor(Math.random() * 16)];
+ }
+ return color;
+}
+var newColor = getRandomColor(); // #E943F0
+-->
+
+    <script>
+var buttonHome = document.querySelector('.btnPrincipal')
+var boxElement = document.querySelector('.quadrados')
+
+
+
+buttonHome.addEventListener('click', function () {
+    var boxes = document.createElement ('div');
+    boxes.style.width = '100';
+    boxes.style.height = '100';
+    boxes.style.backgroundColor = 'cyan';
+
+        boxes.onmouseover = function (){
+            boxes.style.backgroundColor = getRandomColor();
+        }
+
+        boxElement.appendChild(boxes);
+    });
+
+    function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+       }
+       var newColor = getRandomColor(); // #E943F0
+
+
+    </script>

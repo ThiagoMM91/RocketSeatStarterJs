@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafio JS RocketSeat</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="desafio.css">
+    </head>
+    <body>
+        <header class="titulo">
+            <h1 class="textTitulo">Desáfio Rocketseat</h1>
+            <h2>Módulo 2 - Desafio 04</h2>
+        
+        </header>
+
+<body>
+    <input type="text" name="nome" class="mainInput" autofocus>
+    <button class="btnMain" onClick="adicionar()">Adicionar</button>
+    <ul class="namesList"></ul>
+</body>
+
+<!--
+4º exercício
+Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+<input type="text" name="nome">
+<button onClick="adicionar()">Adicionar</button>
+Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique
+-->
+
+<script>
+var names = ['Diego', "Gabriel", "Lucas"];
+
+var listaUl = document.querySelector('.namesList');
+
+    for (nomes of names){
+        var nomeLi = document.createElement('li');
+        var textLi = document.createTextNode(nomes);
+        nomeLi.appendChild(textLi);
+        listaUl.appendChild(nomeLi);
+    }
+
+    function adicionar(){
+    var inputTexto = document.querySelector('.mainInput');
+    var botaoMain = document.querySelector('.mainButton');
+    var novoNome = document.createElement('li');
+    var novoInput = document.createTextNode(inputTexto.value);
+    inputTexto = document.querySelector('.mainInput').value = '';
+    novoNome.appendChild(novoInput);
+    listaUl.appendChild(novoNome);
+   
+    
+};
+
+
+</script>

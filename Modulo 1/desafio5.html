@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafios Módulo 1 JS - Rocketseat</title>
+    </head>
+
+<!--5º exercício
+Dado o seguinte vetor de objetos:
+var usuarios = [
+ {
+ nome: "Diego",
+ habilidades: ["Javascript", "ReactJS", "Redux"]
+ },
+ {
+ nome: "Gabriel",
+ habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+ }
+];
+Escreva uma função que produza o seguinte resultado:
+O Diego possui as habilidades: Javascript, ReactJS, Redux
+O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array
+com um separador utilize o join.
+-->
+
+    <body>
+<div class="container-fluid titulo">
+        <h1 class="tituloPagina"> Desafios de Javascript - Rocketseat </h1>
+        <h2> Módulo 1 - Desafio 05</h2>
+</div>
+    
+
+</body>
+<script>
+
+
+var usuarios = [
+ {
+ nome: "Diego",
+ habilidades: ["Javascript", "ReactJS", "Redux"]
+ },
+ {
+ nome: "Gabriel",
+ habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+ }
+];
+
+
+function exibeSkills (usuarios) {
+    for (user of usuarios) {
+        console.log("O " + user.nome + " possui as habilidades: " + user.habilidades.join(", "));
+    }
+}
+
+textFinal = (exibeSkills(usuarios));
+
+
+</script>
+
+</html>

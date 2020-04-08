@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafios Módulo 1 JS - Rocketseat</title>
+    </head>
+
+<!--3º exercício
+Escreva uma função que verifique se o vetor de habilidades passado possui a habilidade "Javascript"
+e retorna um booleano true/false caso exista ou não.
+function temHabilidade(skills) {
+ // código aqui
+}
+var skills = ["Javascript", "ReactJS", "React Native"];
+temHabilidade(skills); // true ou false
+Dica: para verificar se um vetor contém um valor, utilize o método indexOf
+-->
+
+    <body>
+<div class="container-fluid titulo">
+        <h1 class="tituloPagina"> Desafios de Javascript - Rocketseat </h1>
+        <h2> Módulo 1 - Desafio 03</h2>
+</div>
+    
+
+</body>
+<script>
+var retorno = 0
+var skills = ["Javascript", "ReactJS", "React Native"];
+
+function temHabilidade(skills) {
+    return skills.indexOf("Javascript") !== -1;
+    }
+
+    if(temHabilidade(skills) == "-1"){
+            retorno = ("Não há essa skill.");
+        } else if( (temHabilidade(skills) >= 0) && (temHabilidade(skills) <= skills.length) ) {
+            retorno = ("Há essa skill.");
+        }
+
+console.log(temHabilidade(skills)); // true ou false
+
+console.log(retorno); 
+
+texto = document.createTextNode(retorno);
+document.body.appendChild(texto);
+
+
+</script>
+
+</html>

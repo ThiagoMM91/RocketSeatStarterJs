@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Desafios Módulo 1 JS - Rocketseat</title>
+    </head>
+
+<!--1º exercício
+Crie uma função que dado o objeto a seguir:
+var endereco = {
+ rua: "Rua dos pinheiros",
+ numero: 1293,
+ bairro: "Centro",
+ cidade: "São Paulo",
+ uf: "SP"
+};
+Retorne o seguinte conteúdo:
+O usuário mora em São Paulo / SP, no bairro Centro, na rua "Rua dos Pinheiros" com
+nº 1293.
+-->
+
+    <body>
+<div class="container-fluid titulo">
+        <h1 class="tituloPagina"> Desafios de Javascript - Rocketseat </h1>
+        <h2> Módulo 1 - Desafio 01</h2>
+</div>
+    
+
+</body>
+<script>
+var endereco = {
+    rua: "Rua dos Pinheiros",
+    numero: 1293,
+    bairro: "Centro",
+    cidade: "São Paulo",
+    uf: "SP"
+};
+
+var retorno = ("O usuário mora em " + (endereco.cidade) + " / " + (endereco.uf) + ", no bairro " + (endereco.bairro) + ', na rua ' + (endereco.rua) + " com n " + (endereco.numero)); 
+
+console.log(retorno); 
+
+texto = document.createTextNode(retorno);
+document.body.appendChild(texto);
+
+
+</script>
+
+</html>
